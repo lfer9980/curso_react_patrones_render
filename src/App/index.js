@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTodos } from './useTodos';
 import { TodoHeader } from '../TodoHeader';
-import { ChangeAlertWithStorageListener } from '../ChangeAlert';
+import { ChangeAlert } from '../ChangeAlert';
 import { TodoCounter } from '../TodoCounter';
 import { TodoSearch } from '../TodoSearch';
 import { TodoList } from '../TodoList';
@@ -80,9 +80,8 @@ function App() {
         setOpenModal={setOpenModal}
       />
 
-      <ChangeAlertWithStorageListener 
-        sincronize={sincronizeTodos}
-          
+      <ChangeAlert 
+        sincronize={sincronizeTodos}  
         />
     </React.Fragment>
   );
